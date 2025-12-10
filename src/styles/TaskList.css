@@ -1,0 +1,62 @@
+.task-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-card {
+  background: grey;
+  padding: 15px;
+  border-radius: 12px;
+  border-left: 6px solid white;
+  transition: 0.2s;
+}
+
+.task-card.completed {
+  border-left: 6px solid #1cc88a;
+  background: #eafbf3;
+  text-decoration: line-through;
+  color: #4a4a4a;
+}
+
+.task-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.complete {
+  background: #1cc88a;
+  color: white;
+}
+
+.complete:hover {
+  background: #17a673;
+}
+
+.edit {
+  background: #f6c23e;
+}
+
+.edit:hover {
+  background: #dda20a;
+}
+
+.delete {
+  background: #e74a3b;
+  color: white;
+}
+
+.delete:hover {
+  background: #c0392b;
+}

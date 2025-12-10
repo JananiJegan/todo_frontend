@@ -1,0 +1,10 @@
+.app-container {
+  width: 550px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
