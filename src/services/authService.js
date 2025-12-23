@@ -12,12 +12,12 @@ const removeToken = () => {
 
 const getToken = () => localStorage.getItem("token");
 
-export const signup = async (userData) => {
+const signup = async (userData) => {
   const res = await axios.post(`${API_URL}/signup`, userData);
   return res.data;
 };
 
-export const login = async (credentials) => {
+const login = async (credentials) => {
   const res = await axios.post(`${API_URL}/login`, credentials);
 
   if (res.data.token) {
@@ -27,9 +27,16 @@ export const login = async (credentials) => {
   return res.data;
 };
 
-export const logout = () => {
+const logout = () => {
   removeToken();
 };
 
-export const isAuthenticated = () => !!getToken();
+const isAuthenticated = () => !!getToken();
 
+export default {
+  signup,
+  login,
+  logout,
+  isAuthenticated,
+  getToken,
+};
