@@ -1,16 +1,23 @@
 .task-list {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
 }
 
 .task-card {
-  background: grey;
-  padding: 15px;
+  background: #f9fafb;
+  padding: 20px;
   border-radius: 12px;
-  border-left: 6px solid white;
+  border-left: 6px solid #4f46e5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: 0.2s;
+  color: black;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .task-card.completed {
@@ -21,16 +28,17 @@
 }
 
 .task-actions {
-  margin-top: 10px;
+  margin-top: 12px;
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .btn {
-  padding: 8px 14px;
+  padding: 8px 16px;
   border: none;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 14px;
   transition: 0.2s;
 }
@@ -59,4 +67,10 @@
 
 .delete:hover {
   background: #c0392b;
+}
+
+@media (max-width: 600px) {
+  .task-actions {
+    flex-direction: column;
+  }
 }
